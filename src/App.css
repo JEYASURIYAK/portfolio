@@ -1,38 +1,818 @@
-.App {
-  text-align: center;
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+body {
+    background-image: url(../public/images/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.head {
+    background-color: rgb(85, 118, 133);
+    width: 100%;
+    height: fit-content;
+    /* border-radius: 7px; */
+    /* box-shadow: 0 0 15px 20px (0, 0, 0, .3); */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 10%;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.nav-tool {
+    display: inline-block;
+    margin-left: 30px;
+    transition: .3s;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0;
+    animation: slideTop .8s ease forwards;
+    animation-delay: .2s;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+    position: relative;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    animation: slideRight .8s ease forwards;
+    animation-delay: .2s;
+}
+
+
+
+
+.nav-tool:hover {
+    color: rgb(180, 200, 217);
+}
+
+.nav-tool:focus {
+    color: rgb(115, 143, 167);
+}
+
+.home-container {
+    position: relative;
+    opacity: 0;
+    animation: slideContainer 1s ease forwards;
+    animation-delay: .2s;
+}
+
+.home {
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    top: 100px;
+    left: 9%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 3%;
+    background-color: rgba(100, 141, 159, 0.571);
+    backdrop-filter: blur(8%);
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    z-index: 1;
+}
+
+
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: -3 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-content p {
+    font-size: 15px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgb(115, 143, 167);
+    color: rgb(115, 143, 167);
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.home-sci a:hover {
+    background-color: rgb(163, 161, 161);
+    color: rgb(115, 143, 167);
+    box-shadow: 0 0 20px rgb(166, 156, 156);
+}
+
+.text {
+    color: rgb(98, 230, 230);
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(115, 143, 167);
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px rgb(166, 156, 156),
+        0 0 25px rgb(166, 156, 156), 0 0 50px rgb(166, 156, 156),
+        0 0 100px rgb(166, 156, 156), 0 0 200px rgb(166, 156, 156);
+}
+
+.image {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(56, 88, 111, 0.156),
+        0 0 25px rgba(56, 88, 111, 0.156), 0 0 50px rgba(56, 88, 111, 0.156),
+        0 0 100px rgb(166, 156, 156), 0 0 200px rgba(56, 88, 111, 0.156);
+}
+
+
+
+.about-container {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .2s;
+    position: relative;
+}
+
+.about {
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    left: 9%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 3%;
+    background-color: rgba(100, 141, 159, 0.571);
+    backdrop-filter: blur(8%);
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    z-index: 1;
+    margin-top: 20px;
+
+}
+
+.about-content {
+    text-align: start;
+    padding-left: 20px;
+
+
+}
+
+.about-content h1 {
+    font-weight: 550;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.about-content span {
+    color: rgb(98, 230, 230);
+}
+
+.about-content h3 {
+    font-size: x-large;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .2s;
+
+}
+
+.about-btn {
+    justify-content: center;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+}
+
+
+.Skill-section {
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    left: 9%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 3%;
+    background-color: rgba(100, 141, 159, 0.571);
+    backdrop-filter: blur(8%);
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    z-index: 1;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.Skill-section h1 {
+    text-align: center;
+    font-weight: 550;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+
+}
+
+.Skill-section h1 span {
+    color: rgb(98, 230, 230);
+}
+
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 30px;
+
+}
+
+.tech {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.prof {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.heading1 span {
+    color: rgb(98, 230, 230);
+}
+
+.bar i {
+    color: white;
+}
+
+.bar {
+    font-size: 17px;
+}
+
+.technical-bars .bar {
+    margin-top: 30px;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.2s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    color: black;
+    animation: animate 0.3s 1s cubic-bezier(1, 0, 0, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    border-radius: 5px;
+    animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 80%;
+}
+
+.progress-line.bootstrap span {
+    width: 88%;
+}
+
+.progress-line.js span {
+    width: 75%;
+}
+
+.progress-line.react span {
+    width: 68%;
+}
+
+.progress-line.express span {
+    width: 82%;
+}
+
+.progress-line.node span {
+    width: 53%;
+}
+
+.progress-line.mongodb span {
+    width: 74%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    border-radius: 3px;
+    top: -28px;
+    left: -20px;
+    animation: showText 0.3s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+    left: 95%;
+}
+
+.progress-line.css span::after {
+    content: "80%";
+    left: 95%;
+}
+
+.progress-line.bootstrap span::after {
+    content: "88%";
+    left: 95%;
+}
+
+.progress-line.js span::after {
+    content: "75%";
+    left: 95%;
+}
+
+.progress-line.react span::after {
+    content: "68%";
+    left: 95%;
+}
+
+.progress-line.express span::after {
+    content: "82%";
+    left: 95%;
+}
+
+.progress-line.node span::after {
+    content: "53%";
+    left: 95%;
+}
+
+.progress-line.mongodb span::after {
+    content: "74%";
+    left: 95%;
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.3s 1.5s linear forwards;
+    opacity: 0;
+
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+
+.professional-skills {
+    padding: 40px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+
+
+/* Project section */
+
+
+.project-section {
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    left: 9%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 3%;
+    background-color: rgba(100, 141, 159, 0.571);
+    backdrop-filter: blur(8%);
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    z-index: 1;
+    margin-top: 20px;
+    flex-wrap: wrap;
+
+    h1 {
+        text-align: center;
+        font-weight: 550;
+        letter-spacing: 1px;
+        opacity: 0;
+        animation: slideRight 1s ease forwards;
+        animation-delay: .3s;
+        color: rgb(98, 230, 230);
+    }
+
+}
+
+.project-container {
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: rgb(82, 102, 120);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    border-radius: 10px;
+}
+
+.heading2 {
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .3s;
+
+    h4 {
+        font-size: 23px;
+        font-weight: 300;
+    }
+
+    span {
+        color: rgb(98, 230, 230);
+    }
+
+}
+
+
+.project-container p {
+    padding: 10px;
+}
+
+.project-container h3 {
+    padding: 10px;
+}
+
+.project-container h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+}
+
+.project1 {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.project3 {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.project5 {
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.project2 {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.project4 {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .3s;
+}
+
+.project6 {
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .3s;
+}
+
+
+
+
+
+/* Project section */
+
+
+/* Contact section */
+
+
+
+.contact-section{
+    display: flex;
+    position: relative;
+    width: 85%;
+    height: fit-content;
+    left: 9%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 3%;
+    background-color: rgba(100, 141, 159, 0.571);
+    backdrop-filter: blur(8%);
+    border-radius: 8px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .13);
+    z-index: 1;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-section h1{
+    font-weight: 550;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .3s;
+    text-align: center;
+    span{
+        color: rgb(98, 230, 230);
+    }
+    
+}
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-icons a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgb(115, 143, 167);
+    color: rgb(115, 143, 167);
+    font-size: 20px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+}
+
+.contact-icons a:hover {
+    background-color: rgb(163, 161, 161);
+    color: rgb(115, 143, 167);
+    box-shadow: 0 0 20px rgb(166, 156, 156);
+}
+
+.contact-list li{
+    list-style: none;
+    padding: 10px;
+}
+.contact-list li i{
+    padding: 5px;
+}
+
+.form-container{
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.contact-form input{
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(132, 149, 164);
+    color: white;
+    color: whitesmoke;
+    letter-spacing: 1px;
+}
+
+
+
+.contact-form textarea{
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(132, 149, 164);
+    color: whitesmoke;
+}
+
+
+.button button{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgb(115, 143, 167);
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.button button:hover{
+    box-shadow: 0 0 5px rgb(166, 156, 156)
+}
+
+
+
+/* Contact section */
+
+
+
+
+
+
+
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideContainer {
+    0% {
+        transform: translatex(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .button button{
+        padding: 10px 20px;
+    }
+    .button .col-6{
+        display: flex;
+        justify-content: center;
+    }
 }
