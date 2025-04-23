@@ -6,7 +6,7 @@ export default function Heading() {
   return (
     <div className="head">
         <div className="header">
-            <a href="#" className='logo'>portfolio</a>
+            <a href="#Home" className='logo'>portfolio</a>
 
 
             <div className="nav-bar">
