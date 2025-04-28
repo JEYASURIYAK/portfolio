@@ -74,6 +74,14 @@ export default function Skills() {
                 <span></span>
               </div>
             </div>
+            <div className="bar"><i className='bx bxl-mongodb'></i>
+              <div className="info">
+                <span>UI/UX</span>
+              </div>
+              <div className="progress-line mongodb">
+                <span></span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-md-6 professional-skills">

@@ -32,12 +32,12 @@ export default function Contact() {
         emailjs.send(service_ID,templete_ID,templateparameters,public_Key)
         .then((response) =>{
             console.log("Email sent successfully",response)
+            alert('The mail was sent successfully!')
             setName('');
             setEmail('');
             setSubject('');
             setMessage('');
-            alert('The mail was sent successfully!')
-            console.log([name,email,subject,message]);
+            // console.log([name,email,subject,message]);
 
         })
         .catch((e) =>{
@@ -76,10 +76,10 @@ export default function Contact() {
                 </div>
                 <div className="col-md-6 form-container">
                     <form className='contact-form' onSubmit={validation}>
-                        <input type="text" placeholder='Enter your Name' onChange={(e) => setName(e.target.value)} required />
-                        <input type="email" placeholder='Enter your E-mail' onChange={(e) => setEmail(e.target.value)} required/>
-                        <input type="text" required placeholder='Enter your Subject' onChange={(e) => setSubject(e.target.value)}/>
-                        <textarea name='' id='' cols="30" rows="5" placeholder='Enter your Message' onChange={(e) => setMessage(e.target.value)} required></textarea>
+                        <input type="text" placeholder='Enter your Name' value={name} onChange={(e) => setName(e.target.value)} required />
+                        <input type="email" placeholder='Enter your E-mail' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                        <input type="text" required placeholder='Enter your Subject' value={subject} onChange={(e) => setSubject(e.target.value)}/>
+                        <textarea name='' id='' cols="30" rows="5" value={message} placeholder='Enter your Message' onChange={(e) => setMessage(e.target.value)} required></textarea>
                         <div className="row button">
                             <div className="col-6"><button type="submit" className='send' >Submit</button></div>
                             <div className="col-6"><button type="submit" onClick={cancel} className='cancel'>Cancel</button></div>

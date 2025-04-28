@@ -76,7 +76,7 @@ body {
     color: rgb(180, 200, 217);
 }
 
-.nav-tool:focus {
+.nav-bar .nav-tool:focus {
     color: rgb(115, 143, 167);
 }
 
@@ -412,46 +412,46 @@ body {
 }
 
 .progress-line.html span::after {
-    content: "90%";
+    /* content: "90%"; */
     left: 95%;
 }
 
 .progress-line.css span::after {
-    content: "80%";
+    /* content: "80%"; */
     left: 95%;
 }
 
 .progress-line.bootstrap span::after {
-    content: "88%";
+    /* content: "88%"; */
     left: 95%;
 }
 
 .progress-line.js span::after {
-    content: "75%";
+    /* content: "75%"; */
     left: 95%;
 }
 
 .progress-line.react span::after {
-    content: "68%";
+    /* content: "68%"; */
     left: 95%;
 }
 
 .progress-line.express span::after {
-    content: "82%";
+    /* content: "82%"; */
     left: 95%;
 }
 
 .progress-line.node span::after {
-    content: "53%";
+    /* content: "53%"; */
     left: 95%;
 }
 
 .progress-line.mongodb span::after {
-    content: "74%";
+    /* content: "74%"; */
     left: 95%;
 }
 
-.progress-line span::before {
+/* .progress-line span::before {
     content: "";
     position: absolute;
     width: 0;
@@ -465,7 +465,7 @@ body {
     animation: showText 0.3s 1.5s linear forwards;
     opacity: 0;
 
-}
+} */
 
 @keyframes showText {
     100% {
