@@ -816,3 +816,29 @@ body {
         justify-content: center;
     }
 }
+
+
+@media screen and (max-width:681px) {
+    .home{
+        top: 150px;
+    }
+    
+}
+@media screen and (max-width:353px) {
+    .home{
+        top: 170px;
+    }
+    
+}
+@media screen and (max-width:350px) {
+    .home{
+        top: 180px;
+    }
+    
+}
+@media screen and (max-width:326px) {
+    .home{
+        top: 220px;
+    }
+    
+}
