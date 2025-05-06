@@ -740,10 +740,6 @@ body {
 
 
 
-
-
-
-
 @keyframes slideLeft {
     0% {
         transform: translateX(100px);
@@ -840,5 +836,16 @@ body {
     .home{
         top: 220px;
     }
+    
+}
+
+@media screen and (max-width:767px) {
+    .navbar-nav{
+        background-color: transparent !important;
+        position: absolute;
+        text-align: end;
+        right: 3px;
+    }
+    
     
 }

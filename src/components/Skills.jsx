@@ -74,7 +74,7 @@ export default function Skills() {
                 <span></span>
               </div>
             </div>
-            <div className="bar"><i class='bx bxl-figma'></i>
+            <div className="bar"><i className='bx bxl-figma'></i>
               <div className="info">
                 <span>UI/UX(Figma Tool)</span>
               </div>
