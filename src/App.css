@@ -38,7 +38,7 @@ body {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 10%;
+    padding: 13px 10%;
     color: white;
 }
 
@@ -814,27 +814,9 @@ body {
 }
 
 
-@media screen and (max-width:681px) {
+@media screen and (max-width:992px) {
     .home{
-        top: 150px;
-    }
-    
-}
-@media screen and (max-width:353px) {
-    .home{
-        top: 170px;
-    }
-    
-}
-@media screen and (max-width:350px) {
-    .home{
-        top: 180px;
-    }
-    
-}
-@media screen and (max-width:326px) {
-    .home{
-        top: 220px;
+        top: 110px;
     }
     
 }
