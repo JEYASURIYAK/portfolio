@@ -64,6 +64,21 @@ export default function Projects() {
 
                     </div>
                 </div>
+                <div className="col-md-6">
+                    <div className="project-container project6">
+                        <h3>Razorpay Payment Gateway Integration in React.js</h3>
+                        <p>• React.js-based frontend with Razorpay Checkout integration
+                        • Dynamic payment amount and order ID generation
+                        • Secure transaction handling via Razorpay API
+                        • Callback support for payment success and failure
+                        • Clean and responsive UI for enhanced user experience
+
+                        <b>Tools & Technologies:</b>
+                        React.js, Razorpay API, CSS/Bootstrap
+                        </p>
+
+                    </div>
+                </div>
             </section>
 
         </div>
