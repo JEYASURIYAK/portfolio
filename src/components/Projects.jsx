@@ -71,8 +71,7 @@ export default function Projects() {
                         • Dynamic payment amount and order ID generation
                         • Secure transaction handling via Razorpay API
                         • Callback support for payment success and failure
-                        • Clean and responsive UI for enhanced user experience
-
+                        • Clean and responsive UI for enhanced user experience <br />
                         <b>Tools & Technologies:</b>
                         React.js, Razorpay API, CSS/Bootstrap
                         </p>
